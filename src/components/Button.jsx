@@ -1,6 +1,13 @@
-export default function Button({ children }) {
+export default function Button({ children, onSelect, isSelected }) {
   return (
-    <button className='bg-primary p-2 text-gray-50 font-semibold rounded hover:bg-sky-700'>
+    <button
+      className={
+        isSelected
+          ? 'bg-purple-700 px-4 py-1 text-gray-50 font-semibold hover:bg-purple-900 rounded-xl'
+          : 'bg-gray-800 px-4 py-1 text-gray-50 font-semibold hover:bg-gray-900 rounded-xl'
+      }
+      onClick={onSelect}
+    >
       {children}
     </button>
   );

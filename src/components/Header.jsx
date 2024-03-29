@@ -3,7 +3,7 @@ import virusIcon from '../assets/virus.svg';
 
 export default function Header() {
   return (
-    <div className='bg-primary flex justify-between items-center py-4 px-40'>
+    <div className=' flex justify-between items-center py-4 px-40'>
       <div className='flex items-center gap-4'>
         <img src={bearWatcher_logo} alt='bear watcher logo' />
         <h2 className='text-lg text-gray-50 font-semibold'>Bear Watcher</h2>
