@@ -24,11 +24,16 @@ const MapView = function () {
 
   return (
     <div id="map" className="w-64 h-64">
-      <MapContainer center={coords} zoom={12} scrollWheelZoom={true}>
+      <MapContainer center={coords} zoom={13} scrollWheelZoom={true}>
         <TileLayer
           attribution="&copy; Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL"
           url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
         />
+        <Marker position={coords}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
