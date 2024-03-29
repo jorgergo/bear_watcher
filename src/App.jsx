@@ -11,7 +11,8 @@ function App() {
     <>
       <Header></Header>
       <section className='flex flex-col mx-40 gap-4'>
-        <Content></Content>
+        <ActionBar></ActionBar>
+        <Graphs></Graphs>
         <Logs></Logs>
       </section>
     </>
