@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
 import Header from './components/Header';
-import ActionBar from './components/ActionBar';
-import Graphs from './components/Graphs';
+import Content from './components/Content';
 import Logs from './components/Logs';
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
     <>
       <Header></Header>
       <section className='flex flex-col mx-40 gap-4'>
-        <ActionBar></ActionBar>
-        <Graphs></Graphs>
+        <Content></Content>
         <Logs></Logs>
       </section>
     </>
