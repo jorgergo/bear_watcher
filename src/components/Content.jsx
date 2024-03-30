@@ -27,10 +27,10 @@ export default function Content() {
             Graficas
           </Button>
           <Button
-            onSelect={() => handleClick('estandares')}
-            isSelected={button == 'estandares'}
+            onSelect={() => handleClick('vulnerabilidades')}
+            isSelected={button == 'vulnerabilidades'}
           >
-            Estandares
+            Vulnerabilidades
           </Button>
         </div>
         <input

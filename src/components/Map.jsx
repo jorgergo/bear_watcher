@@ -7,16 +7,14 @@ const position = [51.505, -0.09];
 
 const MapView = function () {
   return (
-    <div id="map" className="w-64 h-64">
+    <div id='map' className='w-64 h-64'>
       <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
         <TileLayer
-          attribution="&copy; Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL"
-          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+          attribution='&copy; Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL'
+          url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png'
         />
         <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+          <Popup></Popup>
         </Marker>
       </MapContainer>
     </div>

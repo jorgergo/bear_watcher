@@ -5,8 +5,6 @@ import Content from './components/Content';
 import Logs from './components/Logs';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Header></Header>
