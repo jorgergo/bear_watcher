@@ -1,3 +1,8 @@
+#El codigo que se corre manda un POST al servidor que es pipedream, donde viene la informacion de los paquetes
+#El codigo comentando es donde se va a intentar mandar el csv a la API con los datos correspondientes del paquete.
+#FALTA: definir API para poder agregarla en el script y verificar que los datos si estan ordenados de manera correcta
+#a la hora de mandar el CSV ( NO LO ESTAN )
+
 import subprocess
 import requests
 import time
