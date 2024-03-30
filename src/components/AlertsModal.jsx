@@ -2,7 +2,7 @@ export default function AlertsModal({ visible, onClose }) {
   if (!visible) return null;
 
   return (
-    <di className='fixed insert-0  z-50 flex justify-center items-center w-full h-full'>
+    <div className='fixed insert-0 flex justify-center items-center w-full h-full'>
       <div className='bg-gray-900 shadow-lg rounded-lg flex flex-col gap-5 p-9 py-12'>
         <h1 className='text-gray-100  font-semibold text-2xl'>
           Amenza detectada
@@ -17,7 +17,7 @@ export default function AlertsModal({ visible, onClose }) {
           <p className='text-gray-200'>192.228.17.57</p>
           <p className='text-gray-200'>50</p>
           <p className='text-gray-200'>12</p>
-          <p className='text-red-500 font-bold'>CABRONA</p>
+          <p className='text-red-500 font-semibold'>CABRONA</p>
         </div>
         <button
           onClick={onClose}
@@ -26,6 +26,6 @@ export default function AlertsModal({ visible, onClose }) {
           Cerrar
         </button>
       </div>
-    </di>
+    </div>
   );
 }
