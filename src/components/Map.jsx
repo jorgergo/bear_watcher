@@ -9,16 +9,31 @@ import {
 
 import L from 'leaflet';
 
+import { Icon } from 'leaflet';
+
 import 'leaflet/dist/leaflet.css';
 import '../styles/mapview.css';
 import { useState, useEffect } from 'react';
 
-const fakeData = [
-  { geocode: [19.2826, -99.6557], popup: 'Amenaza. Tipo: Baja' }, // Mexico, CDMX
-  { geocode: [25.6866, -100.3161], popup: 'Amenaza. Tipo: Media' }, // Monterrey
-  { geocode: [19.8301, -90.5349], popup: 'Amenaza. Tipo: Alta' }, // Mexico, Campeche
-  // { geocode: [35.8617, 104.1954], popup: 'Amenaza. Tipo: Grave' }, // China
-];
+const attackIcon = new Icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/14090/14090313.png',
+  iconSize: [25, 25],
+});
+
+const normalIcon = new L.Icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/8065/8065834.png',
+  iconSize: [25, 25],
+});
+
+// Function that returns an object with the same structure as the fake data objects, with random coordinates and a generic popup message for all of them.
+const randomAttack = () => ({
+  // geocode: [Math.random() * 180 - 90, Math.random() * 360 - 180],
+  // limit the coordinates to North America
+  geocode: [Math.random() * 40 + 10, Math.random() * 100 - 130],
+  // Generate a random number between 1 and 2
+  popup: 'Amenaza',
+  type: Math.floor(Math.random() * 2) + 1,
+});
 
 const GroupMarkers = ({ markers }) => {
   const map = useMap();
@@ -35,7 +50,11 @@ const GroupMarkers = ({ markers }) => {
       }}
     >
       {markers.map((marker, index) => (
-        <Marker key={index} position={marker.geocode}>
+        <Marker
+          key={index}
+          position={marker.geocode}
+          icon={marker.type === 1 ? attackIcon : normalIcon}
+        >
           <Popup>{marker.popup}</Popup>
         </Marker>
       ))}
@@ -47,7 +66,7 @@ export default function MapView() {
   const [coords, setCoords] = useState([20.72356, -103.38479]); // Default coordinates
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState([
-    { geocode: [19.2826, -99.6557], popup: 'Amenaza. Tipo: Grave' }, // Mexico, CDMX
+    { geocode: [19.2826, -99.6557], popup: 'Default', type: 3 }, // Mexico, CDMX
   ]);
 
   useEffect(() => {
@@ -61,15 +80,25 @@ export default function MapView() {
     }
   }, []); // Empty dependency array means this effect runs once on component mount
 
-  // replace the current markers with the new ones from the fake data
+  // Use the randomAttack function to generate a new marker every 5 seconds
   useEffect(() => {
-    setMarkers(() => [...fakeData]);
+    const interval = setInterval(() => {
+      setMarkers((prevMarkers) => [...prevMarkers, randomAttack()]);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   console.log(markers);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loader_container">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   return (
