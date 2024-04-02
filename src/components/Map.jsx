@@ -61,7 +61,7 @@ export default function MapView() {
     }
   }, []); // Empty dependency array means this effect runs once on component mount
 
-  // get the current markers and append the new ones from the fake data
+  // replace the current markers with the new ones from the fake data
   useEffect(() => {
     setMarkers(() => [...fakeData]);
   }, []);
