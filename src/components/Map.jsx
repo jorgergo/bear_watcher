@@ -73,6 +73,7 @@ export default function MapView() {
     { geocode: [19.2826, -99.6557], popup: 'Amenaza. Tipo: Grave' }, // Mexico, CDMX
     { geocode: [25.6866, -100.3161], popup: 'Amenaza. Tipo: Grave' }, // Monterrey
     { geocode: [19.8301, -90.5349], popup: 'Amenaza. Tipo: Grave' }, // Mexico, Campeche
+    // { geocode: [35.8617, 104.1954], popup: 'Amenaza. Tipo: Grave' }, // China
   ]);
 
   useEffect(() => {
@@ -103,7 +104,6 @@ export default function MapView() {
           url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
         />
         <MarkerGroup markers={markers} />
-        <LocationMarker />
       </MapContainer>
     </div>
   );
