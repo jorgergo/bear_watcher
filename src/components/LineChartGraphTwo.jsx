@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import socketIOClient from 'socket.io-client';
-import { LineChart, XAxis, Tooltip, CartesianGrid, Line } from 'recharts';
+import {
+  LineChart,
+  XAxis,
+  Tooltip,
+  CartesianGrid,
+  Line,
+  ResponsiveContainer,
+} from 'recharts';
 
 export default function LineChartGraphTwo() {
   const [data, setData] = useState([]);
@@ -24,17 +31,19 @@ export default function LineChartGraphTwo() {
 
   return (
     <>
-      <LineChart
-        width={800}
-        height={300}
-        data={data}
-        margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-      >
-        <XAxis dataKey='name' />
-        <Tooltip />
-        <CartesianGrid stroke='#f5f5f5' />
-        <Line type='bump' dataKey='x' stroke='#FFCC00' yAxisId={1} />
-      </LineChart>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart
+          width={800}
+          height={300}
+          data={data}
+          margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+        >
+          <XAxis dataKey="name" />
+          <Tooltip />
+          <CartesianGrid stroke="#f5f5f5" />
+          <Line type="bump" dataKey="x" stroke="#FFCC00" yAxisId={1} />
+        </LineChart>
+      </ResponsiveContainer>
     </>
   );
 }
