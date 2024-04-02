@@ -12,15 +12,15 @@ export default function Header() {
 
   return (
     <>
-      <AlertsModal visible={showModal} onClose={handleOnClose}></AlertsModal>
-      <div className=' flex justify-between items-center py-4 px-40'>
-        <div className='flex items-center gap-4'>
+      {/* <AlertsModal visible={showModal} onClose={handleOnClose}></AlertsModal> */}
+      <div className=" flex justify-between items-center py-4 px-40">
+        <div className="flex items-center gap-4">
           <img
             src={bearWatcher_logo}
-            className='w-12 rounded-full  '
-            alt='bear watcher logo'
+            className="w-12 rounded-full  "
+            alt="bear watcher logo"
           />
-          <h2 className='text-lg text-gray-50 font-semibold'>Bear Watcher</h2>
+          <h2 className="text-lg text-gray-50 font-semibold">Bear Watcher</h2>
         </div>
       </div>
     </>
