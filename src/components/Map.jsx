@@ -40,7 +40,7 @@ const GroupMarkers = ({ markers }) => {
 
   useEffect(() => {
     const bounds = L.latLngBounds(markers.map((marker) => marker.geocode));
-    map.flyToBounds(bounds, { padding: [150, 50] });
+    if (markers.length !== 1) map.flyToBounds(bounds, { padding: [150, 50] });
   }, [markers, map]);
 
   return (
@@ -66,7 +66,8 @@ export default function MapView() {
   const [coords, setCoords] = useState([20.72356, -103.38479]); // Default coordinates
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState([
-    { geocode: [19.2826, -99.6557], popup: 'Default', type: 3 }, // Mexico, CDMX
+    // Guadalajara, Mexico
+    { geocode: [20.6769, -103.3475], popup: 'Default', type: 3 },
   ]);
 
   useEffect(() => {
@@ -105,7 +106,7 @@ export default function MapView() {
     <div id="map" className="w-64 h-64">
       <MapContainer
         center={coords}
-        zoom={1}
+        zoom={13}
         scrollWheelZoom={true}
         markers={markers}
       >
