@@ -1,4 +1,6 @@
 import bearWatcher_logo from '../assets/bearwatcher_logo.jpg';
+import bell from '../assets/bell.svg';
+import settings from '../assets/settings.svg';
 
 export default function Header() {
   return (
@@ -11,6 +13,18 @@ export default function Header() {
             alt='bear watcher logo'
           />
           <h2 className='text-lg text-gray-50 font-semibold'>Bear Watcher</h2>
+        </div>
+        <div className='flex gap-4'>
+          <img
+            src={bell}
+            className='w-9 hover:scale-110 ease-in-out duration-200 cursor-pointer'
+            alt='bell icon'
+          />
+          <img
+            src={settings}
+            className='w-9 hover:scale-110 ease-in-out duration-200 cursor-pointer'
+            alt='settings icon'
+          />
         </div>
       </div>
     </>
