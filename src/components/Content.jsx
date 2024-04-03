@@ -18,8 +18,8 @@ export default function Content() {
 
   return (
     <>
-      <section className='mt-12 flex items-center justify-between'>
-        <div className='flex items-start gap-3'>
+      <section className="mt-12 flex items-center justify-between">
+        <div className="flex items-start gap-3">
           <Button
             onSelect={() => handleClick('graficas')}
             isSelected={button == 'graficas'}
@@ -34,9 +34,9 @@ export default function Content() {
           </Button>
         </div>
         <input
-          type='email'
-          placeholder='email...'
-          className='bg-gray-800 p-1 rounded text-center text-gray-400'
+          type="email"
+          placeholder="Correo"
+          className="bg-gray-800 p-1 rounded text-center text-gray-400"
         ></input>
       </section>
       {info}
