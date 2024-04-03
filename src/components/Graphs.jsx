@@ -1,6 +1,6 @@
 import MapView from './Map.jsx';
 import LineChartGraph from './LineChartGraph';
-import LineChartGraphTwo from './PieChartGraphTwo.tsx';
+import PieChart from './PieChart.jsx';
 
 export default function Graphs() {
   return (
@@ -10,7 +10,7 @@ export default function Graphs() {
       </div>
       <div>
         <LineChartGraph></LineChartGraph>
-        <LineChartGraphTwo></LineChartGraphTwo>
+        <PieChart></PieChart>
       </div>
       <div className="min-h-[300px] bg-lime-400"></div>
     </section>
