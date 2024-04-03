@@ -66,6 +66,11 @@ export default function Amenazas() {
     },
   ];
 
+  function getRandomType() {
+    let types = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
+    let index = Math.floor(Math.random() * 4);
+    return types[index];
+  }
   const data = [
     {
       ip_origen: '192.228.17.57',
@@ -73,7 +78,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MEDIUM',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -81,7 +86,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'LOW',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -89,7 +94,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'LOW',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -97,7 +102,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'HIGH',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -105,7 +110,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'HIGH',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -113,7 +118,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'CRITICAL',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -121,7 +126,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MEDIUM',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -129,7 +134,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'CRITICAL',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -137,7 +142,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'LOW',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -145,7 +150,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'HIGH',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -153,7 +158,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MEDIUM',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -161,7 +166,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'LOW',
+      tipo: getRandomType(),
     },
     {
       ip_origen: '192.228.17.57',
@@ -169,7 +174,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'CRITICAL',
+      tipo: getRandomType(),
     },
   ];
 

@@ -18,8 +18,8 @@ export default function Content() {
 
   return (
     <>
-      <section className="mt-12 flex items-center justify-between">
-        <div className="flex items-start gap-3">
+      <section className='mt-12 flex items-center justify-between'>
+        <div className='flex items-start gap-3'>
           <Button
             onSelect={() => handleClick('graficas')}
             isSelected={button == 'graficas'}
@@ -28,10 +28,10 @@ export default function Content() {
           </Button>
           <div className='flex'>
             <Button
-              onSelect={() => handleClick('amenazas')}
-              isSelected={button == 'amenazas'}
+              onSelect={() => handleClick('anomalias')}
+              isSelected={button == 'anomalias'}
             >
-              Amenazas
+              Anomalías
             </Button>
             <span className='fixed mx-24 flex h-3 w-3'>
               <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75'></span>
@@ -40,9 +40,9 @@ export default function Content() {
           </div>
         </div>
         <input
-          type="email"
-          placeholder="Correo"
-          className="bg-gray-800 p-1 rounded text-center text-gray-400"
+          type='email'
+          placeholder='Correo'
+          className='bg-gray-800 p-1 rounded text-center text-gray-400'
         ></input>
       </section>
       {info}

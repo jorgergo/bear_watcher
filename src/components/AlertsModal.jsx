@@ -14,16 +14,16 @@ export default function AlertsModal({
 
   switch (tipo) {
     case 'MEDIUM':
-      tipoColor = <p className='text-yellow-500 font-semibold'>{tipo}</p>;
+      tipoColor = <p className='text-yellow-500 font-bold'>{tipo}</p>;
       break;
     case 'HIGH':
-      tipoColor = <p className='text-pink-600 font-semibold'>{tipo}</p>;
+      tipoColor = <p className='text-pink-500 font-bold'>{tipo}</p>;
       break;
     case 'CRITICAL':
       tipoColor = <p className='text-red-500 font-bold'>{tipo}</p>;
       break;
     default:
-      tipoColor = <p className='text-green-500 font-semibold'>{tipo}</p>;
+      tipoColor = <p className='text-green-500 font-bold'>{tipo}</p>;
       break;
   }
 
