@@ -1,4 +1,6 @@
 import DataTable, { createTheme } from 'react-data-table-component';
+import AlertModal from './AlertsModal.jsx';
+import { useState } from 'react';
 
 export default function Amenazas() {
   createTheme(
@@ -11,7 +13,6 @@ export default function Amenazas() {
       background: {
         default: 'rgba(41, 41, 41, 0.15)',
       },
-
       divider: {
         default: 'rgba(0, 0, 0, 0.2)',
       },
@@ -64,13 +65,11 @@ export default function Amenazas() {
       ),
     },
   ];
-  const handleButtonClick = (row) => {
-    alert(row.ip_destino);
-  };
+
   const data = [
     {
       ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
+      direccion: 'google.com',
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
@@ -78,144 +77,66 @@ export default function Amenazas() {
     },
     {
       ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
+      direccion: 'google.com',
       ip_destino: '192.228.17.57',
       tamano: 25,
-      cantidad: 15,
+      cantidad: 32,
       tipo: 'MODERADA',
     },
     {
       ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 3,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 76,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 13,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 77,
-      cantidad: 100,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
+      direccion: 'google.com',
       ip_destino: '192.228.17.57',
       tamano: 25,
-      cantidad: 15,
+      cantidad: 32,
       tipo: 'MODERADA',
     },
     {
       ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
+      direccion: 'google.com',
       ip_destino: '192.228.17.57',
       tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 77,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 12,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 36,
-      cantidad: 12,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 15,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 23,
-      tipo: 'MODERADA',
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'Tampico, Tamaulipas',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 88,
+      cantidad: 32,
       tipo: 'MODERADA',
     },
   ];
 
+  const [, setInfo] = useState(false);
+  const [modalInfo, setModalInfo] = useState(null);
+
+  const handleButtonClick = (row) => {
+    const { ip_origen, direccion, ip_destino, tamano, cantidad, tipo } = row;
+
+    setModalInfo(
+      <AlertModal
+        ip_d={ip_origen}
+        direccion={direccion}
+        ip_o={ip_destino}
+        tamano={tamano}
+        cantidad={cantidad}
+        tipo={tipo}
+        onCloseKeep={handleCloseKeep}
+        onCloseRemove={handleCloseRemove}
+      />
+    );
+
+    setInfo(true);
+  };
+
+  const handleCloseKeep = () => {
+    setInfo(false);
+    setModalInfo(null);
+  };
+
+  const handleCloseRemove = () => {
+    alert('Entrada de amenaza eliminada');
+    setInfo(false);
+    setModalInfo(null);
+  };
+
   return (
     <>
+      {modalInfo}
       <DataTable
         theme='bearwatcher'
         responsive
@@ -223,7 +144,7 @@ export default function Amenazas() {
         data={data}
         pagination
         fixedHeader
-      ></DataTable>
+      />
     </>
   );
 }
