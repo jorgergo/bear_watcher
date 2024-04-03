@@ -37,7 +37,12 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 
 ## Capturas de pantalla de la interfaz de usuario
 
-PENDIENTE
+### Dashboard
+<img width="1440" alt="image" src="https://github.com/jorgergo02/bear_watcher/assets/102307137/f23b8659-4ae9-4c55-b5f2-ea8ad8257cb1">
+
+### Tabla de amenazas
+<img width="1431" alt="image" src="https://github.com/jorgergo02/bear_watcher/assets/102307137/7dfb3271-2bb6-4bfd-8d69-bf06fe913094">
+
 
 ### Backend
 (Descripción pendiente de las tecnologías utilizadas para el backend, incluyendo captura de información del tráfico, entrenamiento de modelos de inteligencia artificial, almacenamiento de resultados y endpoints para el frontend.)
