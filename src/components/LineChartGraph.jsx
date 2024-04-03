@@ -31,17 +31,18 @@ export default function LineChartGraph() {
 
   return (
     <>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width='100%' height={300}>
         <LineChart
           width={100}
           height={300}
           data={data}
           margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
         >
-          <XAxis dataKey="name" />
+          <XAxis dataKey='name' />
           <Tooltip />
-          <CartesianGrid stroke="#f5f5f5" />
-          <Line type="bump" dataKey="x" stroke="#99df00" yAxisId={0} />
+          <CartesianGrid stroke='#f5f5f5' />
+          <Line type='bump' dataKey='x' stroke='#99df00' yAxisId={0} />
+          <Line type='bump' dataKey='y' stroke='#ff0055' yAxisId={1} />
         </LineChart>
       </ResponsiveContainer>
     </>

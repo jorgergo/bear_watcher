@@ -1,3 +1,9 @@
+import Amenazas from './Amenazas.jsx';
+
 export default function Standar() {
-  return <div className='bg-yellow-400 min-h-[600px]'></div>;
+  return (
+    <div>
+      <Amenazas></Amenazas>
+    </div>
+  );
 }
