@@ -10,6 +10,23 @@ export default function AlertsModal({
   onCloseKeep,
   onCloseRemove,
 }) {
+  let tipoColor;
+
+  switch (tipo) {
+    case 'MEDIUM':
+      tipoColor = <p className='text-yellow-500 font-semibold'>{tipo}</p>;
+      break;
+    case 'HIGH':
+      tipoColor = <p className='text-pink-600 font-semibold'>{tipo}</p>;
+      break;
+    case 'CRITICAL':
+      tipoColor = <p className='text-red-500 font-bold'>{tipo}</p>;
+      break;
+    default:
+      tipoColor = <p className='text-green-500 font-semibold'>{tipo}</p>;
+      break;
+  }
+
   return (
     <div className='fixed inset-0 flex justify-center items-center w-full h-full z-50 backdrop-blur-sm'>
       <div className='bg-gray-900 shadow-lg rounded-lg flex flex-col gap-5 p-9 py-12 w-[1000px]'>
@@ -28,7 +45,7 @@ export default function AlertsModal({
           <p className='text-gray-200'>{ip_d}</p>
           <p className='text-gray-200'>{tamano}</p>
           <p className='text-gray-200'>{cantidad}</p>
-          <p className='text-yellow-500 font-semibold'>{tipo}</p>
+          {tipoColor}
         </div>
         <p className='text-gray-400 font-semibold text-lg'>Descripción:</p>
         <p className='text-gray-200'>

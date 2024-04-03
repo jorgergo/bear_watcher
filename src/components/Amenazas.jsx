@@ -73,7 +73,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'MEDIUM',
     },
     {
       ip_origen: '192.228.17.57',
@@ -81,7 +81,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'LOW',
     },
     {
       ip_origen: '192.228.17.57',
@@ -89,7 +89,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'LOW',
     },
     {
       ip_origen: '192.228.17.57',
@@ -97,7 +97,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'HIGH',
     },
     {
       ip_origen: '192.228.17.57',
@@ -105,7 +105,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'HIGH',
     },
     {
       ip_origen: '192.228.17.57',
@@ -113,7 +113,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'CRITICAL',
     },
     {
       ip_origen: '192.228.17.57',
@@ -121,7 +121,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'MEDIUM',
     },
     {
       ip_origen: '192.228.17.57',
@@ -129,7 +129,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'CRITICAL',
     },
     {
       ip_origen: '192.228.17.57',
@@ -137,7 +137,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'LOW',
     },
     {
       ip_origen: '192.228.17.57',
@@ -145,7 +145,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'HIGH',
     },
     {
       ip_origen: '192.228.17.57',
@@ -153,7 +153,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'MEDIUM',
     },
     {
       ip_origen: '192.228.17.57',
@@ -161,7 +161,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'LOW',
     },
     {
       ip_origen: '192.228.17.57',
@@ -169,7 +169,7 @@ export default function Amenazas() {
       ip_destino: '192.228.17.57',
       tamano: 25,
       cantidad: 32,
-      tipo: 'MODERADA',
+      tipo: 'CRITICAL',
     },
   ];
 
