@@ -1,8 +1,78 @@
-# React + Vite
+# Bear Watcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Bear Watcher es nuestro proyecto para el Talent Hackathon, específicamente diseñado para el track de "Detección de anomalías por análisis de tráfico en la navegación". Utilizando una combinación de tecnologías front-end avanzadas y una arquitectura backend modular (pendiente de describir), nuestro objetivo es desarrollar un software capaz de analizar el tráfico de navegación en tiempo real, detectando anomalías que puedan indicar una posible amenaza de ciberseguridad.
 
-Currently, two official plugins are available:
+## Motivación
+La ciberseguridad es un riesgo creciente y de gran impacto para las empresas en todo el mundo. Con el aumento del cibercrimen, es crucial contar con herramientas avanzadas para detectar y prevenir amenazas antes de que causen daño. Nuestro proyecto busca ofrecer una solución accesible y eficaz, especialmente diseñada para ayudar a las PYMES a minimizar sus riesgos y facilitar su crecimiento seguro.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Objetivo
+Desarrollar un software que, mediante el uso de inteligencia artificial, sea capaz de:
+- Capturar en tiempo real el tráfico de navegación.
+- Analizar y almacenar datos capturados.
+- Identificar patrones de comportamiento anómalo.
+- Distinguir entre tráfico "normal" y tráfico con anomalías, ayudando así a prevenir posibles ciberataques.
+
+## ODS Al que Está Alineado el Track
+Este proyecto contribuye al Objetivo de Desarrollo Sostenible (ODS) número 9: Industria, innovación e infraestructura.
+
+## Tecnologías Utilizadas
+
+### Frontend
+El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecnologías y librerías:
+
+- React
+- Vite
+- Bun
+- Leaflet
+- React Data Table Component
+- React Leaflet
+- Recharts
+- Socket.io
+- Autoprefixer
+- ESLint
+- PostCSS
+- Tailwind CSS
+
+
+## Capturas de pantalla de la interfaz de usuario
+
+PENDIENTE
+
+### Backend
+(Descripción pendiente de las tecnologías utilizadas para el backend, incluyendo captura de información del tráfico, entrenamiento de modelos de inteligencia artificial, almacenamiento de resultados y endpoints para el frontend.)
+
+
+## Capturas de pantalla de cosas de back?
+
+PENDIENTE
+
+## Fases del Hackathon
+1. **Fase 1:** Presentación de la idea-solución con justificación.
+2. **Fase 2:** Desarrollo del prototipo y entrega de evidencias.
+3. **Fase 3:** Demostración del prototipo y pruebas funcionales ante el jurado.
+
+## Recursos
+- Equipo de red para hacer mirroring (proporcionado por SISA).
+
+## Evaluación
+El proyecto será evaluado en base a los siguientes criterios:
+- Capacidad tecnológica
+- Creatividad e innovación
+- Originalidad y alto impacto
+- Alcance de implementación
+- Funcionalidad del prototipo
+
+## Mentores y Jurado
+- Luis Gerson Melquiades, Director de Operaciones, SISA
+- Enrique Sánchez, Gerente de Desarrollo, SISA
+- Edgar Fuentes, Gerente de Soporte, SISA
+- Ricardo Flores, Gerente de Proyectos, SISA
+- Oscar Ibarra, Director General, SISA
+- Omar Ibarra, Consejero Técnico, SISA
+
+## Licencia
+(Descripción de la licencia, si aplica)
+
+## Cómo Contribuir
+(Información sobre cómo otros desarrolladores pueden contribuir al proyecto)
