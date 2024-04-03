@@ -17,12 +17,12 @@ import { useState, useEffect } from 'react';
 
 const attackIcon = new Icon({
   iconUrl: 'https://cdn-icons-png.flaticon.com/512/14090/14090313.png',
-  iconSize: [25, 25],
+  iconSize: [10, 10],
 });
 
 const normalIcon = new L.Icon({
   iconUrl: 'https://cdn-icons-png.flaticon.com/512/8065/8065834.png',
-  iconSize: [25, 25],
+  iconSize: [10, 10],
 });
 
 // Function that returns an object with the same structure as the fake data objects, with random coordinates and a generic popup message for all of them.

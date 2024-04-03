@@ -37,9 +37,10 @@ const renderCustomizedLabel = ({
     <text
       x={x}
       y={y}
-      fill="black"
+      fill="white"
       textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
+      className="oswald-unique"
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
