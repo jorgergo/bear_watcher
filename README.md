@@ -46,7 +46,14 @@ Se encuentran 3 carpetas el MQTT, Flask y Mosquito
 ```docker
 docker build -t flask_image .
 docker-compose up
-'''
+```
+Esto hace funcionar la base de datos de postgre y la API de Flask
+
+### Mosquitto
+```docker
+docker build -t mosquitto_image .
+docker-compose up
+```
 
 
 ## Estructura del FrontEnd en React
