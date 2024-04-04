@@ -19,21 +19,57 @@ Este proyecto contribuye al Objetivo de Desarrollo Sostenible (ODS) número 9: I
 
 ## Tecnologías Utilizadas/Capacidad Tecnológica
 
-### Frontend
-El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecnologías y librerías:
+# Bear Watcher Frontend
 
-- React
-- Vite
-- Bun
-- Leaflet
-- React Data Table Component
-- React Leaflet
-- Recharts
-- Socket.io
-- Autoprefixer
-- ESLint
-- PostCSS
-- Tailwind CSS
+El frontend de Bear Watcher ha sido desarrollado utilizando las últimas tecnologías y librerías para asegurar una experiencia de usuario fluida y una arquitectura escalable. A continuación, se detallan las tecnologías y librerías clave utilizadas en el desarrollo:
+
+## Tecnologías y Librerías:
+
+- **React**: Una biblioteca de JavaScript para construir interfaces de usuario.
+- **Vite**: Un herramienta de construcción que ofrece una experiencia de desarrollo más rápida.
+- **Leaflet**: Una biblioteca de JavaScript para mapas interactivos.
+- **React Data Table Component**: Un componente de React para crear tablas de datos con facilidad.
+- **React Leaflet**: Integra Leaflet con React para crear mapas.
+- **Recharts**: Una biblioteca de gráficos basada en React.
+- **Socket.io**: Permite comunicaciones en tiempo real entre clientes y servidores.
+- **Autoprefixer**: Un plugin para postprocesar CSS y añadir prefijos de vendor automáticamente.
+- **ESLint**: Una herramienta de linting para JavaScript y JSX.
+- **PostCSS**: Un herramienta para transformar CSS con plugins de JavaScript.
+- **Tailwind CSS**: Un framework de CSS para diseñar rápidamente interfaces sin salir del HTML.
+
+## Pasos de Instalación:
+
+Para poner en marcha el proyecto en tu entorno local, sigue estos pasos:
+
+1. **Clona el repositorio**: Obten una copia del proyecto en tu máquina local clonando el repositorio de GitHub.
+
+    ```
+    git clone https://github.com/jorgergo02/bear_watcher
+    ```
+
+2. **Instala las dependencias**: Navega a la carpeta del frontend y ejecuta el siguiente comando para instalar todas las dependencias necesarias listadas en el `package.json`.
+
+    ```
+    cd BearWatcher/Frontend
+    npm install
+    ```
+
+3. **Ejecuta el entorno de desarrollo**: Una vez instaladas las dependencias, puedes iniciar el servidor de desarrollo con Vite para ver la aplicación en tu navegador.
+
+    ```
+    npm run dev
+    ```
+
+    Esto hará que la aplicación esté disponible en `http://localhost:3000` (o el puerto que se muestre en tu terminal).
+
+4. **Construye el proyecto para producción**: Si necesitas generar una versión para producción, puedes hacerlo con el siguiente comando:
+
+    ```
+    npm run build
+    ```
+
+Sigue estos pasos para configurar y ejecutar el entorno de desarrollo del frontend de Bear Watcher. Para el funcionamiento completo de la aplicación, asegúrate también de configurar los servicios del backend según las instrucciones proporcionadas en su respectivo README.
+
 
 ## Pasos de Instalacion
 
