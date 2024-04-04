@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 export default function AlertsModal({
+  id,
   ip_o,
-  direccion,
   ip_d,
   tamano,
   cantidad,
@@ -34,14 +34,14 @@ export default function AlertsModal({
           Amenaza detectada
         </h1>
         <div className='grid grid-cols-6 justify-between items-center '>
+          <p className='text-gray-500'>ID</p>
           <p className='text-gray-500'>IP origen</p>
-          <p className='text-gray-500'>Dirección</p>
           <p className='text-gray-500'>IP destino</p>
           <p className='text-gray-500'>Tamaño</p>
           <p className='text-gray-500'>Cantidad</p>
           <p className='text-gray-500'>Tipo</p>
+          <p className='text-gray-200'>{id}</p>
           <p className='text-gray-200'>{ip_o}</p>
-          <p className='text-gray-200'>{direccion}</p>
           <p className='text-gray-200'>{ip_d}</p>
           <p className='text-gray-200'>{tamano}</p>
           <p className='text-gray-200'>{cantidad}</p>
@@ -86,7 +86,7 @@ export default function AlertsModal({
 
 AlertsModal.propTypes = {
   ip_o: PropTypes.string.isRequired,
-  direccion: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   ip_d: PropTypes.string.isRequired,
   tamano: PropTypes.number.isRequired,
   cantidad: PropTypes.number.isRequired,

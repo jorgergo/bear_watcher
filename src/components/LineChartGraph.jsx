@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import socketIOClient from 'socket.io-client';
 import {
   LineChart,
+  Legend,
   XAxis,
   Tooltip,
   CartesianGrid,
+  YAxis,
   Line,
   ResponsiveContainer,
 } from 'recharts';
@@ -38,11 +40,12 @@ export default function LineChartGraph() {
           data={data}
           margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
         >
+          <Legend verticalAlign='top' height={36} />
           <XAxis dataKey='name' />
+          <YAxis dataKey='x' domain={[0, 4000]} tickCount={10} />
           <Tooltip />
-          <CartesianGrid stroke='#f5f5f5' />
-          <Line type='bump' dataKey='x' stroke='#99df00' yAxisId={0} />
-          <Line type='bump' dataKey='y' stroke='#ff0055' yAxisId={1} />
+          <CartesianGrid stroke='#f5f5f5' x={1000} />
+          <Line type='monotone' dataKey='size' stroke='#99df00' yAxisId={0} />
         </LineChart>
       </ResponsiveContainer>
     </>

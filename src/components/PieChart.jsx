@@ -10,16 +10,16 @@ import {
 import '../styles/piechart.css';
 
 const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group PABLO', value: 1000 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group D', value: 200 },
-  { name: 'Group D', value: 1500 },
+  { name: 'login.microsoftonline.com', value: 400 },
+  { name: 'ntp.msn.com', value: 300 },
+  { name: 'open.spotify.com', value: 300 },
+  { name: 'outlook.office.com', value: 200 },
+  { name: 'ab.chatgpt.com', value: 1000 },
+  { name: 'expogdl.com', value: 500 },
+  { name: 'amazonaws.com', value: 270 },
+  { name: 'mail.google.com', value: 320 },
+  { name: 'github.githubassets.com', value: 610 },
+  { name: 'Otros', value: 800 },
 ];
 
 const COLORS = [
