@@ -147,7 +147,10 @@ export default function Amenazas() {
   }
 
   if (loading) return <div className='text-gray-400 font-bold'>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error)
+    return (
+      <div className='text-gray-400 font-bold'>Error: {error.message}</div>
+    );
 
   return (
     <>

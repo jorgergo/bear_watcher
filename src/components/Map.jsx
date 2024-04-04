@@ -89,7 +89,7 @@ export default function MapView() {
   useEffect(() => {
     const interval = setInterval(() => {
       setMarkers((prevMarkers) => [...prevMarkers, randomAttack()]);
-    }, 5000);
+    }, 500);
 
     return () => {
       clearInterval(interval);
