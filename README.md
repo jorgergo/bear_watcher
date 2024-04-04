@@ -40,7 +40,12 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 Clonamos el repositorio dentro de el se encontraran 2 carpetas 
 Backend
 Se encuentran 3 carpetas el MQTT, Flask y Mosquito
+
+
  ### Flask
+```python
+docker build -t flask_image .
+docker-compose up
 
 
 ## Estructura del FrontEnd en React
