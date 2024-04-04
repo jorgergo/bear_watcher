@@ -27,9 +27,13 @@ const normalIcon = new L.Icon({
 
 // Function that returns an object with the same structure as the fake data objects, with random coordinates and a generic popup message for all of them.
 const randomAttack = () => ({
-  // geocode: [Math.random() * 180 - 90, Math.random() * 360 - 180],
   // limit the coordinates to North America
-  geocode: [Math.random() * 40 + 10, Math.random() * 100 - 130],
+  // geocode: [Math.random() * 40 + 10, Math.random() * 100 - 130],
+  // use [20.72356, -103.38479] as the center of Guadalajara, Mexico and generate random coordinates around it in a radius of 0.1 degrees
+  geocode: [
+    20.72356 + (Math.random() - 0.5) * 0.1,
+    -103.38479 + (Math.random() - 0.5) * 0.1,
+  ],
   // Generate a random number between 1 and 2
   popup: 'Amenaza',
   type: Math.floor(Math.random() * 2) + 1,
