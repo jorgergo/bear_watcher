@@ -43,9 +43,9 @@ Se encuentran 3 carpetas el MQTT, Flask y Mosquito
 
 
  ### Flask
-```python
+```docker
 docker build -t flask_image .
-docker-compose up
+docker-compose up'''
 
 
 ## Estructura del FrontEnd en React
