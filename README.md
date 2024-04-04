@@ -16,7 +16,7 @@ Desarrollar un software que, mediante el uso de inteligencia artificial, sea cap
 ## ODS Al que Está Alineado el Track
 Este proyecto contribuye al Objetivo de Desarrollo Sostenible (ODS) número 9: Industria, innovación e infraestructura.
 
-## Tecnologías Utilizadas
+## Tecnologías Utilizadas/Capacidad Tecnológica
 
 ### Frontend
 El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecnologías y librerías:
@@ -50,12 +50,25 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 
 
 ### Backend
-(Descripción pendiente de las tecnologías utilizadas para el backend, incluyendo captura de información del tráfico, entrenamiento de modelos de inteligencia artificial, almacenamiento de resultados y endpoints para el frontend.)
+Aqui describimos las tecnologías utilizadas para el backend, incluyendo captura de información del tráfico, entrenamiento de modelos de inteligencia artificial y almacenamiento de resultados.
+
+Para crear los modelos de entrenamiento de Inteligencia Artifical se utilizaron arquitecturas de red neuronal:
+-Bayesian Neural Network (BNN)
+
+Para la parte del almacenamiento de datos utilizamos:
+-PostgreSQL
+-Protocolo MQTT
 
 
 ## Capturas de pantalla de cosas de back?
 
-PENDIENTE
+PENDIENTE AGREGAR SCREENSHOTS DARIO
+
+## Capturas de trafico
+Se utilizaron las herramientas de:
+-Wireshark
+-Tshark
+-Lua(alternativa)
 
 ## Fases del Hackathon
 1. **Fase 1:** Presentación de la idea-solución con justificación.
