@@ -53,22 +53,22 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 Aqui describimos las tecnologías utilizadas para el backend, incluyendo captura de información del tráfico, entrenamiento de modelos de inteligencia artificial y almacenamiento de resultados.
 
 Para crear los modelos de entrenamiento de Inteligencia Artifical se utilizaron arquitecturas de red neuronal:
--Bayesian Neural Network (BNN)
+  - Bayesian Neural Network (BNN)
 
 Para la parte del almacenamiento de datos utilizamos:
--PostgreSQL
--Protocolo MQTT
+  -PostgreSQL
+  -Protocolo MQTT
 
 
-## Capturas de pantalla de cosas de back?
+## Capturas de pantalla de cosas de back
 
-PENDIENTE AGREGAR SCREENSHOTS DARIO
+<img width="1431" alt="image" src="https://github.com/jorgergo02/bear_watcher/src/assets/vuln_1.jpg">
 
 ## Capturas de trafico
 Se utilizaron las herramientas de:
--Wireshark
--Tshark
--Lua(alternativa)
+  -Wireshark
+  -Tshark
+  -Lua(alternativa)
 
 ## Fases del Hackathon
 1. **Fase 1:** Presentación de la idea-solución con justificación.
