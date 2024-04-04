@@ -35,6 +35,13 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 - PostCSS
 - Tailwind CSS
 
+## Pasos de Instalacion
+
+Clonamos el repositorio dentro de el se encontraran 2 carpetas 
+Backend
+Se encuentran 3 carpetas el MQTT, Flask y Mosquito
+ ### Flask
+
 
 ## Estructura del FrontEnd en React
 ![7](https://github.com/jorgergo02/bear_watcher/assets/102307137/219b4719-88f8-4fad-9817-b982a0708d48)
