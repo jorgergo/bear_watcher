@@ -44,7 +44,7 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 ## Capturas de pantalla de la interfaz de usuario
 
 ### Dashboard
-<img width="1440" alt="image" src="https://github.com/jorgergo02/bear_watcher/assets/102307137/31511c31-5dce-4f47-9a8c-e3ca2be3b3fe">
+<img width="1440" alt="image" src="https://github.com/jorgergo02/bear_watcher/blob/main/src/assets/e51d02b4-7caa-48f8-a9e4-20e6126dbcea.jpg">
 
 ### Tabla de amenazas
 <img width="1431" alt="image" src="https://github.com/jorgergo02/bear_watcher/assets/102307137/7dfb3271-2bb6-4bfd-8d69-bf06fe913094">
