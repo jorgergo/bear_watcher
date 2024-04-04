@@ -36,7 +36,8 @@ const randomAttack = () => ({
   ],
   // Generate a random number between 1 and 2
   popup: 'Amenaza',
-  type: Math.floor(Math.random() * 2) + 1,
+  // type: Math.floor(Math.random() * 2) + 1,
+  type: Math.random() < 0.15 ? 1 : 2,
 });
 
 const GroupMarkers = ({ markers }) => {
