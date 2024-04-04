@@ -1,3 +1,4 @@
+TODO LIST: ACTUALIZAR IMAGENES (NO PUDE JORGE)
 # Bear Watcher
 
 ## Descripción
