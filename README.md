@@ -55,6 +55,15 @@ docker build -t mosquitto_image .
 docker-compose up
 ```
 
+### MQTT
+```docker
+pip install -r requirements.txt
+python3 server.py 
+python3 ClientDB.py
+python3 CLientModel1.py
+python3 ClientCorreo.py
+```
+Dentro de server.py se debemos especificar la interfaz de escucha y dentro de correo debesmoa autenticarnos e indicar el host de destino
 
 ## Estructura del FrontEnd en React
 ![7](https://github.com/jorgergo02/bear_watcher/assets/102307137/219b4719-88f8-4fad-9817-b982a0708d48)
