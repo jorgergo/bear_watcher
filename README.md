@@ -63,7 +63,7 @@ Para la parte del almacenamiento de datos utilizamos:
 ## Capturas de pantalla del back
 En la imagen anexada podemos ver commo de manera efectiva se detecto una anomalia, esta se nos comento por parte del equipo de SISA, que efectivamente lo era y que nuestro modelo es acertado en ese momento.
 
-<img width="1431" alt="image" src="https://github.com/bear_watcher/src/assets/vuln_1.jpg">
+<img width="1431" alt="image" src="https://github.com/fodelao29/bear_watcher/src/assets/vuln_1.jpg">
 
 ## Capturas de trafico
 Se utilizaron las herramientas de:
