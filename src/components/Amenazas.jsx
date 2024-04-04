@@ -1,6 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import DataTable, { createTheme } from 'react-data-table-component';
 import AlertModal from './AlertsModal.jsx';
-import { useState } from 'react';
+import axios from 'axios';
 
 export default function Amenazas() {
   createTheme(
@@ -27,12 +28,12 @@ export default function Amenazas() {
 
   const columns = [
     {
-      name: 'IP Origen',
-      selector: (row) => row.ip_origen,
+      name: 'ID',
+      selector: (row) => row.id,
     },
     {
-      name: 'Dirección',
-      selector: (row) => row.direccion,
+      name: 'IP Origen',
+      selector: (row) => row.ip_origen,
     },
     {
       name: 'IP Destino',
@@ -66,128 +67,56 @@ export default function Amenazas() {
     },
   ];
 
-  function getRandomType() {
-    let types = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
-    let index = Math.floor(Math.random() * 4);
-    return types[index];
-  }
-  const data = [
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-    {
-      ip_origen: '192.228.17.57',
-      direccion: 'google.com',
-      ip_destino: '192.228.17.57',
-      tamano: 25,
-      cantidad: 32,
-      tipo: getRandomType(),
-    },
-  ];
-
-  const [, setInfo] = useState(false);
   const [modalInfo, setModalInfo] = useState(null);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get('http://172.20.10.7:5000/ticket');
+        console.log(response.data);
+
+        if (Array.isArray(response.data.data)) {
+          const newData = [];
+          for (let i = 0; i < response.data.data.length; i++) {
+            const item = response.data.data[i];
+            const newItem = {
+              id: item[0],
+              ip_origen: item[3],
+              ip_destino: item[4],
+              tamano: item[6],
+              cantidad: getRandomNum(), // Supongo que esta es la posición correcta para la cantidad
+              tipo: getRandomType(), // Aquí podrías seguir generando un tipo aleatorio o usar una lógica diferente
+            };
+            newData.push(newItem);
+          }
+          setData(newData);
+        } else {
+          throw new Error('Data received is not an array.');
+        }
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+    const intervalId = setInterval(fetchData, 30000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const handleButtonClick = (row) => {
-    const { ip_origen, direccion, ip_destino, tamano, cantidad, tipo } = row;
+    const { id, ip_origen, ip_destino, tamano, cantidad, tipo } = row;
 
     setModalInfo(
       <AlertModal
+        id={id}
         ip_d={ip_origen}
-        direccion={direccion}
         ip_o={ip_destino}
         tamano={tamano}
         cantidad={cantidad}
@@ -196,20 +125,29 @@ export default function Amenazas() {
         onCloseRemove={handleCloseRemove}
       />
     );
-
-    setInfo(true);
   };
 
   const handleCloseKeep = () => {
-    setInfo(false);
     setModalInfo(null);
   };
 
   const handleCloseRemove = () => {
     alert('Entrada de amenaza eliminada');
-    setInfo(false);
     setModalInfo(null);
   };
+
+  function getRandomType() {
+    let types = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
+    let index = Math.floor(Math.random() * 4);
+    return types[index];
+  }
+
+  function getRandomNum() {
+    return Math.floor(Math.random() * 500);
+  }
+
+  if (loading) return <div className='text-gray-400 font-bold'>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <>
