@@ -35,6 +35,11 @@ El frontend de Bear Watcher ha sido desarrollado utilizando las siguientes tecno
 - Tailwind CSS
 
 
+## Estructura del FrontEnd en React
+![7](https://github.com/jorgergo02/bear_watcher/assets/102307137/219b4719-88f8-4fad-9817-b982a0708d48)
+
+![8](https://github.com/jorgergo02/bear_watcher/assets/102307137/6d4a08b6-31fc-4c73-ba9e-caabd44d93bb)
+
 ## Capturas de pantalla de la interfaz de usuario
 
 ### Dashboard
