@@ -68,9 +68,10 @@ En la imagen anexada podemos ver commo de manera efectiva se detecto una anomali
 
 ## Capturas de trafico
 Se utilizaron las herramientas de:
-  -Wireshark
-  -Tshark
-  -Lua(alternativa)
+  - Wireshark
+  - Tshark: Se utiliza para poder realizar lo que hace wireshark pero a nivel de línea de comandos, tshark esta utilizandose a partir de un script en python para poder hacer la escucha de la red y la caputra de los paquetes sin la necesidad de estar corriendo wireshark como tal.
+  - Lua:(alternativa) Lua fue inicialmente pensado apra nuestra propuesta, a pesar de que al final no se utilizo es de valor mencionar su funcionamiento y porque se puede plantear como una alternativa.
+  Lua  es un lenguaje de programación de scripting que esta especificamente diseñado para ser  integrado en aplicaciones. Lua se tenia planeado usarlo para escribir scripts que pueden extender la funcionalidad de Wireshark y directamente mandar en vivo desde wireshark a partir del script de Lua, los paquetes en un formato JSON, incluso agregando filtros personalizados. Por temas de tiempo de implementacion y como decision de equipo se opto por utilizar tshark.
 
 ## Fases del Hackathon
 1. **Fase 1:** Presentación de la idea-solución con justificación.
