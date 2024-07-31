@@ -154,6 +154,13 @@ El proyecto será evaluado en base a los siguientes criterios:
 - Alcance de implementación
 - Funcionalidad del prototipo
 
+## Mimebros del equipo
+- Dario Mejia Castillo
+- Rodolfo de la O
+- Jose Pablo  Poblette
+- Jorge Ramon Gonzalez Ozorno
+- Fabian Gonzalez Vera
+
 ## Mentores y Jurado
 - Luis Gerson Melquiades, Director de Operaciones, SISA
 - Enrique Sánchez, Gerente de Desarrollo, SISA
